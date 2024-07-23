@@ -1,10 +1,12 @@
-﻿using SignalRSandbox.Hubs;
+﻿using SignalRSandbox.HostedServices;
+using SignalRSandbox.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSignalR();
+builder.Services.AddHostedService<ClockHostedService>();
 
 var app = builder.Build();
 
@@ -25,6 +27,7 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapHub<ChatHub>("/chathub");
+app.MapHub<TimeHub>("/timehub");
 
 app.Run();
 

@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Simple Time";
+}
+
+<div class="container">
+    <div class="row p-1">
+        <div class="col-6"><h1>Simple Time</h1></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6"><small>Uses a Hosted Service to constantly receive an updated time from the server.</small></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6">
+            <div>
+                <p id="serverTime"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/time.js"></script>

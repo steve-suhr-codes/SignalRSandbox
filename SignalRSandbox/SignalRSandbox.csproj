@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="Hubs\" />
+    <None Remove="HostedServices\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Hubs\" />
+    <Folder Include="HostedServices\" />
   </ItemGroup>
 </Project>
